@@ -5,4 +5,4 @@ const Housing = () => {
         </div>
     )
 }
-export default Housing;
+export default Housing

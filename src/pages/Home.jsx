@@ -1,8 +1,10 @@
+import Banner from  "../components/Banner"
+
 const Home = () => {
     return (
         <div className="Home">
-            Accueil
+            <Banner />
         </div>
     )
 }
-export default Home;
+export default Home
