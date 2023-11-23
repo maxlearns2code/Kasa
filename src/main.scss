@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import "./sass/abstracts/Variables";
+@import "./sass/abstracts/Mixins";
+
+@import "./sass/base/Reset";
+@import "./index.scss";
+
+@import "./sass/components/Banner";
+@import "./sass/components/Card";
+@import "./sass/components/Carousel";
+@import "./sass/components/Collapse";
+@import "./sass/components/Error";
+@import "./sass/components/Logo";
+@import "./sass/components/Navbar";
+@import "./sass/components/Router";
+
+@import "./sass/layout/Footer";
+@import "./sass/layout/Header";
+
+@import "./sass/pages/Home";
+@import "./sass/pages/About";
+@import "./sass/pages/Housing";
