@@ -1,0 +1,28 @@
+.Card-Container {
+    width: auto;
+    display: grid;
+    grid-template-columns: 340px 340px 340px;
+    grid-column-gap: 55px;
+    grid-row-gap: 55px;
+    margin: $margin-border;
+    padding: 55px;
+    background-color: $color-background;
+    border-radius: 25px;
+}
+
+.Card {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    background: $color-card;
+    
+    &_Title {
+        position: absolute;
+        width: 138px;
+        padding-top: 280px;
+        padding-left: 20px;
+        font-size: $small-font-size;
+        font-weight: $medium-font-weight;
+        color: $color-white;
+    }
+}
