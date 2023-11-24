@@ -21,8 +21,28 @@
         width: 138px;
         padding-top: 280px;
         padding-left: 20px;
-        font-size: $small-font-size;
+        font-size: $medium-font-size;
         font-weight: $medium-font-weight;
         color: $color-white;
     }
 }
+@include for-mobile {
+    .Card-Container {
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+        margin: $margin-mobile;
+        padding: 0;
+        background-color: $color-white;
+    }
+    
+    .Card {
+        width: 100%;
+        height: 255px;
+        border-radius: 10px;
+        background: $color-card;
+        
+        &_Title {
+            padding-top: 190px;
+        }
+    }
+ }

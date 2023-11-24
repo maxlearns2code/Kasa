@@ -4,5 +4,14 @@
     align-items: center;
     color: $color-main;
     gap: 30px;
-
+    a {
+        font-size: $big-font-size;
+    }
 }
+@include for-mobile {
+    .Navbar {
+        a {
+            font-size: $small-font-size;
+        }
+    }
+ }

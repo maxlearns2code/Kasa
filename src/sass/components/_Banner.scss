@@ -16,7 +16,18 @@
     &_Text {
         position: absolute;
         color: $color-white;
-        font-size: $big-font-size;
+        font-size: $big-title-font-size;
         font-weight: $medium-font-weight;
     }
 }
+@include for-mobile {
+    .Banner {
+        height: 111px;
+        margin: $margin-mobile;
+        &_Text {
+            left: 20px;
+            width: 217px;
+            font-size: $big-font-size;
+        }
+    }
+ }

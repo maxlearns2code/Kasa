@@ -11,4 +11,18 @@
         width: 122px;
         margin-bottom: 30px;
     }
+    &_Text {
+        font-size: $medium-font-size;
+    }
 }
+@include for-mobile {
+    .Footer {
+        img {
+            margin-bottom: 10px;
+        }
+        &_Text {
+            width: 95px;
+            font-size: $small-font-size;
+        }
+    }
+ }
