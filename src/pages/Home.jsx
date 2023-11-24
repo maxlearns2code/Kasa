@@ -1,6 +1,7 @@
 import Header from  "../layout/Header"
 import Banner from  "../components/Banner"
 import Card from  "../components/Card"
+import Footer from  "../layout/Footer"
 
 const Home = () => {
     return (
@@ -17,7 +18,7 @@ const Home = () => {
                     <Card />
                 </div>
             </main>
-            
+            <Footer />
         </div>
     )
 }

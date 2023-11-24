@@ -4,10 +4,10 @@ import "../main.scss"
 
 const Header = () => {
     return (
-        <div className="Header">
+        <header className="Header">
             <Logo />
             <Navbar />
-        </div>
+        </header>
     )
 }
 export default Header

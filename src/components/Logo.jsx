@@ -1,11 +1,11 @@
-import Logo from "../assets/Logo.svg"
+import Logo from "../assets/Logo-Header.svg"
 import "../main.scss"
 
-const HeaderLogo = () => {
+const ShowLogo = () => {
     return (
-        <div className="HeaderLogo">
+        <div className="ShowLogo">
             <img src={Logo} alt="Logo Kasa"/>
         </div>
     )
 }
-export default HeaderLogo
+export default ShowLogo
