@@ -4,16 +4,16 @@
 @import "./sass/abstracts/Mixins";
 
 @import "./sass/base/Reset";
+@import "./sass/base/Router";
 @import "./index.scss";
 
 @import "./sass/components/Banner";
-@import "./sass/components/Card";
+@import "./sass/components/card";
 @import "./sass/components/Carousel";
 @import "./sass/components/Collapse";
 @import "./sass/components/Error";
 @import "./sass/components/Logo";
 @import "./sass/components/Navbar";
-@import "./sass/components/Router";
 
 @import "./sass/layout/Footer";
 @import "./sass/layout/Header";

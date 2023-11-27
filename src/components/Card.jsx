@@ -1,10 +1,13 @@
 import "../main.scss"
 
-const Card= () => {
+
+const Card= ({data}) => {
     return (
-        <article className="Card">
-            <h2 className="Card_Title">Titre de la location</h2>
-        </article>        
+        
+        <article className="card">
+            <h2 className="card_title">{data.title}</h2>
+            <img className="card_image" src={data.cover} />
+            </article>        
     )
 }
 export default Card
