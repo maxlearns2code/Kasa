@@ -1,23 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-@import "./sass/abstracts/Variables";
-@import "./sass/abstracts/Mixins";
+@import "./sass/abstracts/mixins";
+@import "./sass/abstracts/variables";
 
-@import "./sass/base/Reset";
-@import "./sass/base/Router";
+@import "./sass/base/reset";
+@import "./sass/base/router";
 @import "./index.scss";
 
-@import "./sass/components/Banner";
+@import "./sass/components/banner";
 @import "./sass/components/card";
-@import "./sass/components/Carousel";
-@import "./sass/components/Collapse";
-@import "./sass/components/Error";
-@import "./sass/components/Logo";
-@import "./sass/components/Navbar";
+@import "./sass/components/carousel";
+@import "./sass/components/collapse";
+@import "./sass/components/error";
+@import "./sass/components/logo";
+@import "./sass/components/navbar";
 
-@import "./sass/layout/Footer";
-@import "./sass/layout/Header";
+@import "./sass/layout/footer";
+@import "./sass/layout/header";
 
-@import "./sass/pages/Home";
-@import "./sass/pages/About";
-@import "./sass/pages/Housing";
+@import "./sass/pages/home";
+@import "./sass/pages/about";
+@import "./sass/pages/housing";

@@ -5,7 +5,7 @@ import "../main.scss"
 
 const Header = () => {
     return (
-        <header className="Header">
+        <header className="header">
             <Logo />
             <Navbar />
         </header>

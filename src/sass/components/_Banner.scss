@@ -1,4 +1,4 @@
-.Banner {
+.banner {
     position: relative;
     display: flex;
     align-items: center;
@@ -6,28 +6,34 @@
     width: auto;
     height: 223px;
     margin: $margin-border;
-    &_Image {
+    &_image {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 25px;
         filter: brightness(0.7)
     }
-    &_Text {
+    &_text {
         position: absolute;
         color: $color-white;
         font-size: $big-title-font-size;
         font-weight: $medium-font-weight;
     }
 }
+
+@include for-tablet {
+    .banner {
+        margin: $margin-tablet;
+    }
+}
 @include for-mobile {
-    .Banner {
+    .banner {
         height: 111px;
         margin: $margin-mobile;
-        &_Text {
+        &_text {
             left: 20px;
             width: 217px;
             font-size: $big-font-size;
         }
     }
- }
+}

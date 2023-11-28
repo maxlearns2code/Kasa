@@ -1,11 +1,18 @@
-.Header {
+.header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin: $margin-border;
 }
+
+@include for-tablet {
+    .header {
+        margin: $margin-tablet;
+    }
+}
+
 @include for-mobile {
-    .Header {
+    .header {
         margin: $margin-mobile;
     }
- }
+}

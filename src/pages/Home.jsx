@@ -7,9 +7,8 @@ import { Link } from "react-router-dom"
 
 const Home = () => {
     return (
-        <div className="Home">
-            <Header />
-            
+        <div className="home">
+            <Header />            
             <main>
                 <Banner /> 
                 <div className="card-container">

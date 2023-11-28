@@ -5,7 +5,7 @@ import Housing from '../pages/Housing';
 
 function Router() {
     return (
-      <div className="Router">
+      <div className="router">
         <BrowserRouter>
         <Routes>
           <Route path='/' element={<Home />} />

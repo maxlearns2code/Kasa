@@ -3,7 +3,7 @@ import "../main.scss"
 
 const ShowLogo = () => {
     return (
-        <div className="ShowLogo">
+        <div className="showlogo">
             <img src={Logo} alt="Logo Kasa"/>
         </div>
     )

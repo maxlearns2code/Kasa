@@ -1,4 +1,4 @@
-.Footer {
+.footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,16 +11,16 @@
         width: 122px;
         margin-bottom: 30px;
     }
-    &_Text {
+    &_text {
         font-size: $medium-font-size;
     }
 }
 @include for-mobile {
-    .Footer {
+    .footer {
         img {
             margin-bottom: 10px;
         }
-        &_Text {
+        &_text {
             width: 95px;
             font-size: $small-font-size;
         }
