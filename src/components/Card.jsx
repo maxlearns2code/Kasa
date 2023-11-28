@@ -1,7 +1,7 @@
 import "../main.scss"
 
 
-const Card= ({data}) => {
+const Card = ({data}) => {
     return (
         
         <article className="card">

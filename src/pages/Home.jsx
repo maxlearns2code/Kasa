@@ -1,5 +1,6 @@
 import Header from  "../layout/Header"
 import Banner from  "../components/Banner"
+import HomeBanner from "../assets/Cliffs.png"
 import Card from  "../components/Card"
 import Footer from  "../layout/Footer"
 import logements from "../datas/logements.json"
@@ -10,13 +11,13 @@ const Home = () => {
         <div className="home">
             <Header />            
             <main>
-                <Banner /> 
-                <div className="card-container">
-                    {logements.map(el => {
-                        return <Card data={el}/>
-                    })}
-                    
-                </div>
+            <Banner img={HomeBanner} text={"Chez vous,\n partout et ailleurs"} /> 
+            <div className="card-container">
+                {logements.map(el => {
+                    return <Card data={el}/>
+                })}
+                
+            </div>
             </main>
             <Footer />
         </div>

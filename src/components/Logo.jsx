@@ -1,10 +1,9 @@
-import Logo from "../assets/Logo-Header.svg"
 import "../main.scss"
 
-const ShowLogo = () => {
+const ShowLogo = ({img}) => {
     return (
         <div className="showlogo">
-            <img src={Logo} alt="Logo Kasa"/>
+            <img src={img} alt="Logo Kasa"/>
         </div>
     )
 }
