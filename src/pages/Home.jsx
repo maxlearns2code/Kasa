@@ -11,12 +11,11 @@ const Home = () => {
         <div className="home">
             <Header />            
             <main>
-            <Banner img={HomeBanner} text={"Chez vous,\n partout et ailleurs"} /> 
+            <Banner img={HomeBanner} text={"Chez vous, partout et ailleurs"} /> 
             <div className="card-container">
                 {logements.map(el => {
                     return <Card data={el}/>
                 })}
-                
             </div>
             </main>
             <Footer />

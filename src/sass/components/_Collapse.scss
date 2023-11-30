@@ -1,0 +1,19 @@
+.collapse-container {
+    display: flex;
+    flex-direction: column;
+    margin: $margin-collapse;
+    gap: 20px;
+}
+.collapse {
+    padding: 20px;
+    background-color: $color-main;
+    color: $color-white;
+    &_header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px
+
+    }
+}
