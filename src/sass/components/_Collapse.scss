@@ -5,15 +5,48 @@
     gap: 20px;
 }
 .collapse {
-    padding: 20px;
-    background-color: $color-main;
-    color: $color-white;
     &_header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px
-
+        padding: 20px;
+        background-color: $color-main;
+        color: $color-white;
+        border-radius: 5px;
+        &--title {
+            font-size: $big-font-size;
+        }
+        &--upbtn {
+            border: none;
+            background-color: $color-main;
+        }
+        &--downbtn {
+            border: none;
+            background-color: $color-main;
+            animation: downbtn 5s;
+            @keyframes downbtn {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+    &_text {
+        background-color: $color-background;
+        color: $color-main;
+        padding: 20px;
+        animation: showtext 5s;
+        @keyframes showtext {
+            0% {
+                transform: translateY(-77px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
     }
 }
