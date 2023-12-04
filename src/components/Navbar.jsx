@@ -1,12 +1,28 @@
-import "../main.scss"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
     return (
         <div className="navbar">
-            <Link to="/">Accueil </Link>
-            <Link to="/about">A Propos</Link>
+            <NavLink
+            to="/"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+            }
+            >
+            Accueil
+            </NavLink>
+            <NavLink
+            to="/about"
+            className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "active" : ""
+            }
+            >
+            A Propos
+            </NavLink>
         </div>
     )
 }
 export default Navbar
+
+
+

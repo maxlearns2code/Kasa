@@ -3,16 +3,27 @@
     flex-direction:column;
     justify-content: space-around;
     align-items: center;
-    height: 100vh;
     color: $color-main;
     &_title {
+        margin-top: 80px;
         font-size: 288px;
         font-weight: $bold-font-weight;
-        line-height: 411px;
-        letter-spacing: 0em;
         text-align: center;
+        @include for-mobile {
+            font-size: 96px;
+        }
     }
     &_text {
+        margin: 100px 0px 100px 0px;
         font-size: 36px;
+        text-align: center;
+        @include for-mobile {
+            width: 260px;
+            font-size: $medium-font-size;
+        }
+    }
+    &_link {
+        margin-bottom: 100px;
+        text-decoration: underline;
     }
 }

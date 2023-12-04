@@ -3,7 +3,16 @@
     flex-direction: column;
     margin: $margin-collapse;
     gap: 20px;
+    @include for-tablet {
+        margin: $margin-tablet;
+    }
+    
+    @include for-mobile {
+        margin: $margin-mobile;
+    }
 }
+
+
 .collapse {
     &_header {
         display: flex;
@@ -11,35 +20,40 @@
         justify-content: space-between;
         align-items: center;
         padding: 20px;
+        height: 52px;
         background-color: $color-main;
         color: $color-white;
         border-radius: 5px;
+        @include for-mobile {
+            height: 30px;
+        }
         &--title {
             font-size: $big-font-size;
+            @include for-mobile {
+                font-size: $small-font-size;
+            }
         }
         &--upbtn {
             border: none;
             background-color: $color-main;
+            transform: rotate(0deg);
+	        transition: 0.5s ease-in-out;
         }
         &--downbtn {
             border: none;
             background-color: $color-main;
-            animation: downbtn 5s;
-            @keyframes downbtn {
-                0% {
-                    transform: rotate(0deg);
-                }
-                100% {
-                    transform: rotate(-180deg);
-                }
-            }
+            transform: rotate(-180deg);
+	        transition: 0.5s ease-in-out;
         }
     }
     &_text {
+        max-height: 200px;
         background-color: $color-background;
         color: $color-main;
         padding: 20px;
-        animation: showtext 5s;
+        transition: height 5s;
+        p {
+            animation: showtext 5s;
         @keyframes showtext {
             0% {
                 transform: translateY(-77px);
@@ -47,6 +61,7 @@
             100% {
                 transform: translateY(0);
             }
+        }
         }
     }
 }

@@ -31,18 +31,18 @@ const collapses = [
 
 const About = () => {
     return (
-        <div className="about">
+        <>
             <Header />            
             <main>
-            <Banner img={AboutBanner} text={""} /> 
-            <div className="collapse-container">
-                {collapses.map(el => {
-                    return <Collapse data={el}/>
-                })}
-            </div>
+                <Banner img={AboutBanner} text={""} /> 
+                <div className="collapse-container">
+                    {collapses.map(el => {
+                        return <Collapse data={el}/>
+                    })}
+                </div>
             </main>
             <Footer />
-        </div>
+        </>
     )
 }
 export default About

@@ -1,5 +1,3 @@
-import "../main.scss"
-
 const Banner = ({img, text}) => {
     return (
         <section className="banner">

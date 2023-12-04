@@ -1,4 +1,3 @@
-import "../main.scss"
 import ArrowCollapse from "../assets/Arrow-Collapse.svg"
 import { useState } from 'react'
 
@@ -12,7 +11,7 @@ const Collapse = ({data}) => {
                     <img src={ArrowCollapse} alt="fermeture du menu"/>
                 </button>
             </div>
-            <p className="collapse_text">{data.text}</p>
+            <div className="collapse_text"><p>{data.text}</p></div>
         </article>        
     ) : (
         <article className="collapse">

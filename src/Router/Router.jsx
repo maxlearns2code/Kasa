@@ -11,7 +11,7 @@ function Router() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
-          <Route path='/errorpage' element={<ErrorPage />} />
+          <Route path="*" element={<ErrorPage />} />
           <Route path='/housing' element={<Housing />} />
         </Routes>
         </BrowserRouter>

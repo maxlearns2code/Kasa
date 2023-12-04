@@ -1,5 +1,3 @@
-import "../main.scss"
-
 const ShowLogo = ({img}) => {
     return (
         <div className="showlogo">
