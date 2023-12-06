@@ -12,7 +12,7 @@ function Router() {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path="*" element={<ErrorPage />} />
-          <Route path='/housing' element={<Housing />} />
+          <Route path='/housing/:id' element={<Housing />} />
         </Routes>
         </BrowserRouter>
       </div>

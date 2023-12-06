@@ -1,0 +1,29 @@
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+    margin: $margin-border;
+    height: 415px;
+    color: $color-main;
+    &_arrow {
+        position: absolute;
+        background: transparent;
+	    border: transparent;
+    }
+    &_arrow:hover {
+        cursor: pointer;
+    }
+    &_arrow--left {
+        left: 10px;
+    }
+    &_arrow--right {
+        right: 10px;
+    }
+    &_image {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;        
+    }
+}
