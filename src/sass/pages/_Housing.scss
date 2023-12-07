@@ -1,0 +1,50 @@
+.housing {
+    margin: $margin-border;
+    color: $color-main;
+    &_content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0px 20px 0px;
+    }
+    &_tagsrating {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        &--tags {
+            background-color: $color-main;
+            color: $color-white;
+            width: 115px;
+            height: 25px;
+            border-radius: 10px;
+        }
+    }
+    .content_header {
+        display: flex;
+        flex-direction: column;
+        &--title {
+            font-size: 36px;
+        }
+        &--location {
+            font-size: $medium-font-size;
+        }
+    }
+    .content_body {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 167px;
+        &--namehost {
+            width: 93px;
+            text-align: right;
+            font-size: $medium-font-size;
+        }
+        &--picturehost {
+            width: 64px;
+            border-radius: 32px;
+        }
+    }
+}

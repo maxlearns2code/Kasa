@@ -1,7 +1,42 @@
+import Header from  "../layout/Header"
+import Slideshow from  "../components/Slideshow"
+import Tags from  "../components/Tags"
+import Collapse from  "../components/Collapse"
+import Footer from  "../layout/Footer"
+import logements from "../datas/logements.json"
+import { useParams } from 'react-router-dom'
+
 const Housing = () => {
+    const { id } = useParams();
+    const currentHousing = logements.find(apartment => apartment.id === id)
+    console.log(currentHousing)
     return (
         <>
-            Logements
+            <Header />            
+            <main>
+                <div className="housing">
+                    <div className="housing_content">
+                        <div className="content_header">
+                            <h1 className="content_header--title">{currentHousing.title}</h1>
+                            <p className="content_header--location">{currentHousing.location}</p>
+                        </div>
+                        <div className="content_body">
+                            <section className="content_body--namehost">{currentHousing.host.name}</section>
+                            <img className="content_body--picturehost" src={currentHousing.host.picture} alt="nom du propriétaire"/>     
+                        </div>
+                    </div>
+                    <div className="housing_tagsrating">
+                        <section className="housing_tagsrating--tags">{currentHousing.tags}</section>
+                        <section className="housing_tagsrating--rating">{currentHousing.rating}</section>
+                    </div>
+                    <div className="housing_collapses">
+
+                    </div>
+                    
+                    
+                </div>
+            </main>
+            <Footer />
         </>
     )
 }
