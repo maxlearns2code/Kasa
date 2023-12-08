@@ -11,7 +11,9 @@ const Collapse = ({data}) => {
                     <img src={ArrowCollapse} alt="fermeture du menu"/>
                 </button>
             </div>
-            <div className="collapse_text"><p>{data.text}</p></div>
+            <div className="collapse_text">
+                <p>{data.text}</p>
+            </div>
         </article>        
     ) : (
         <article className="collapse">

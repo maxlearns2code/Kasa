@@ -3,7 +3,6 @@
     display: flex;
     justify-content: center;
 	align-items: center;
-    margin: $margin-border;
     height: 415px;
     color: $color-main;
     &_arrow {
@@ -24,6 +23,7 @@
         width: 100%;
         height: 100%;
         z-index: -1;
-        object-fit: cover;        
+        object-fit: cover;
+        border-radius: 25px;       
     }
 }

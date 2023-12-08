@@ -15,6 +15,9 @@ const Housing = () => {
             <Header />            
             <main>
                 <div className="housing">
+                    <div className="housing_slider">
+                        <Slideshow key={id} slides={currentHousing.pictures}/>
+                    </div>
                     <div className="housing_content">
                         <div className="content_header">
                             <h1 className="content_header--title">{currentHousing.title}</h1>
@@ -28,7 +31,6 @@ const Housing = () => {
                     <div className="housing_tagsrating">
                         <div className="housing_tagsrating--tags">
                             {currentHousing.tags.map((el, index) => {
-                                console.log(currentHousing.tags)
                                 return <Tags key={index} data={el}/>
                             })}
                         </div>
