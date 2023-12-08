@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 
 const Card = ({data, lazy}) => {
-    console.log(data)
     return (   
         <Link to={`/housing/${data.id}`}>
           <article className="card">

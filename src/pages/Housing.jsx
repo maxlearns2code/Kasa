@@ -26,14 +26,17 @@ const Housing = () => {
                         </div>
                     </div>
                     <div className="housing_tagsrating">
-                        <section className="housing_tagsrating--tags">{currentHousing.tags}</section>
+                        <div className="housing_tagsrating--tags">
+                            {currentHousing.tags.map((el, index) => {
+                                console.log(currentHousing.tags)
+                                return <Tags key={index} data={el}/>
+                            })}
+                        </div>
                         <section className="housing_tagsrating--rating">{currentHousing.rating}</section>
                     </div>
                     <div className="housing_collapses">
 
                     </div>
-                    
-                    
                 </div>
             </main>
             <Footer />
