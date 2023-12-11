@@ -37,7 +37,15 @@
         &--btn {
             border: none;
             background-color: $color-main;
-            cursor: pointer;         
+            cursor: pointer;  
+        }
+        .arrow-up{
+            transition: all 0.5s;
+            transform : rotate(0deg);
+        }
+        .arrow-down{
+            transition: all 0.5s;
+            transform : rotate(-180deg);
         }
     }
     &_body {
@@ -49,5 +57,5 @@
         &--text {
             padding: 20px;
         }
-      }
+    }
 }

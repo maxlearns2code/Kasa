@@ -7,20 +7,19 @@ import Footer from  "../layout/Footer"
 import logements from "../datas/logements.json"
 
 export async function loader() {
-    const hello = logements;
-    return { hello };
+    const housing = logements;
+    return { housing };
   }
 
 const Home = () => {
-    const { hello } = useLoaderData();
-    console.log(hello)
+    const { housing } = useLoaderData();
     return (
         <>
             <Header />            
             <main>
                 <Banner img={HomeBanner} text={"Chez vous, partout et ailleurs"} /> 
                 <div className="card-container">
-                    {hello.map((el,id) => {
+                    {housing.map((el,id) => {
                         return <Card key={el.id} data={el} lazy={id<=6 ? 'eager' : 'lazy'}/>
                     })}
                 </div>

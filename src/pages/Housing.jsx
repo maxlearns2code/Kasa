@@ -9,7 +9,6 @@ import { useParams } from 'react-router-dom'
 const Housing = () => {
     const { id } = useParams();
     const currentHousing = logements.find(apartment => apartment.id === id)
-    console.log(currentHousing)
     return (
         <>
             <Header />            
@@ -37,7 +36,12 @@ const Housing = () => {
                         <section className="housing_tagsrating--rating">{currentHousing.rating}</section>
                     </div>
                     <div className="housing_collapses">
-
+                        <div className="housing_collapses--description">
+                            
+                        </div>
+                        <div className="housing_collapses--equipements">
+                            
+                        </div>
                     </div>
                 </div>
             </main>
