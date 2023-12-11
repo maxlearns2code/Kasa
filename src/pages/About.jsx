@@ -36,8 +36,8 @@ const About = () => {
             <main>
                 <Banner img={AboutBanner} text={""} /> 
                 <div className="collapse-container">
-                    {collapses.map(el => {
-                        return <Collapse data={el}/>
+                    {collapses.map((el, index) => {
+                        return <Collapse key={index} data={el}/>
                     })}
                 </div>
             </main>
