@@ -38,7 +38,7 @@ const Housing = () => {
                     </div>
                     <div className="housing_collapses">
                         <div className="housing_collapses--description">
-                            
+                            <Collapse key={id} title="Description" text={currentHousing.description}/>
                         </div>
                         <div className="housing_collapses--equipements">
                             
