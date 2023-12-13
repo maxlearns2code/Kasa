@@ -1,6 +1,7 @@
 import Header from  "../layout/Header"
 import Slideshow from  "../components/Slideshow"
 import Tags from  "../components/Tags"
+import Rating from  "../components/Rating"
 import Collapse from  "../components/Collapse"
 import Footer from  "../layout/Footer"
 import logements from "../datas/logements.json"
@@ -21,19 +22,19 @@ const Housing = () => {
                         <div className="content_header">
                             <h1 className="content_header--title">{currentHousing.title}</h1>
                             <p className="content_header--location">{currentHousing.location}</p>
-                        </div>
-                        <div className="content_body">
-                            <section className="content_body--namehost">{currentHousing.host.name}</section>
-                            <img className="content_body--picturehost" src={currentHousing.host.picture} alt="nom du propriétaire"/>     
-                        </div>
-                    </div>
-                    <div className="housing_tagsrating">
-                        <div className="housing_tagsrating--tags">
+                            <div className="content_header--tags">
                             {currentHousing.tags.map((el, index) => {
                                 return <Tags key={index} data={el}/>
                             })}
                         </div>
-                        <section className="housing_tagsrating--rating">{currentHousing.rating}</section>
+                        </div>
+                        <div className="content_body">
+                            <div className="content_body--host">
+                                <section className="content_body--namehost">{currentHousing.host.name}</section>
+                                <img className="content_body--picturehost" src={currentHousing.host.picture} alt="nom du propriétaire"/>
+                            </div>
+                            <section className="content_body--rating"><Rating key={id} rating={currentHousing.rating}/></section>  
+                        </div>
                     </div>
                     <div className="housing_collapses">
                         <div className="housing_collapses--description">
