@@ -4,8 +4,12 @@ import FooterLogo from "../assets/Logo-Footer.svg"
 const Footer = () => {
     return (
         <footer className="footer">
-            <Logo img={FooterLogo}/>
-            <p className="footer_text">© 2020 Kasa. All rights reserved</p>
+            <Logo 
+                img={FooterLogo}
+            />
+            <p className="footer_text">
+                © 2020 Kasa. All rights reserved
+            </p>
         </footer>
     )
 }

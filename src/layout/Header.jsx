@@ -5,7 +5,9 @@ import Navbar from  "../components/Navbar"
 const Header = () => {
     return (
         <header className="header">
-            <Logo img={HeaderLogo}/>
+            <Logo 
+                img={HeaderLogo}
+            />
             <Navbar />
         </header>
     )

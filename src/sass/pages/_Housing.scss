@@ -18,6 +18,29 @@
             align-items: normal;
         }
     }
+    &_collapses {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        margin-bottom:30px;
+        gap: 50px;
+        @include for-mobile {
+            flex-direction: column;
+            gap: 30px;
+        }
+        &--description {
+            width: 50%;
+            @include for-mobile {
+                width: 100%;
+            }
+        }
+        &--equipments {
+            width: 50%;
+            @include for-mobile {
+                width: 100%;
+            }
+        }
+    }
     
     .content_header {
         display: flex;
@@ -61,7 +84,6 @@
                     margin-right: 10px;
                 }
             }
-
         }
     }
     .content_body {

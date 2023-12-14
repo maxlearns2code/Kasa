@@ -18,13 +18,21 @@ export default function Collapse({title, text}) {
   return (
     <div className="collapse">
       <div className="collapse_header" ref={head}>
-        <h3 className="collapse_header--title">{title}</h3>
+        <h3 className="collapse_header--title">
+          {title}
+        </h3>
         <button className="collapse_header--btn" onClick={toogleCollapse}>
-          <img class={!open ? 'arrow-up' : 'arrow-down'} src={ArrowCollapse} alt="ouverture/fermeture" />
+          <img 
+            class={!open ? 'arrow-up' : 'arrow-down'} 
+            src={ArrowCollapse} 
+            alt="ouverture/fermeture"
+          />
         </button>
       </div>
       <div className="collapse_body" ref={body}>
-        <p className="collapse_body--text">{text}</p>
+        <p className="collapse_body--text">
+          {text}
+        </p>
       </div>
     </div>
   );

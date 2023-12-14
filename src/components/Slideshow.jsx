@@ -20,9 +20,29 @@ const SlideShow = ({slides}) => {
 
     return (        
         <article className="slideshow">
-            <button className="slideshow_arrow slideshow_arrow--left" onClick={previousSlide}><img src={ArrowLeftSlideshow} alt="précédent" /></button>
-            <img className="slideshow_image" src={slides[currentIndex]} alt={slides[currentIndex].title}/>
-            <button className="slideshow_arrow slideshow_arrow--right" onClick={nextSlide}><img src={ArrowRightSlideshow} alt="suivant" /></button>
+            <button 
+                className="slideshow_arrow slideshow_arrow--left" 
+                onClick={previousSlide}
+            >
+                <img 
+                    src={ArrowLeftSlideshow} 
+                    alt="précédent" 
+                />
+            </button>
+            <img 
+                className="slideshow_image" 
+                src={slides[currentIndex]} 
+                alt={slides[currentIndex].title}
+            />
+            <button 
+                className="slideshow_arrow slideshow_arrow--right" 
+                onClick={nextSlide}
+            >
+                <img 
+                    src={ArrowRightSlideshow} 
+                    alt="suivant" 
+                />
+            </button>
         </article>        
     )
 }

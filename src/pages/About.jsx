@@ -28,10 +28,17 @@ const About = () => {
         <>
             <Header />            
             <main>
-                <Banner img={AboutBanner} text={""} /> 
+                <Banner 
+                    img={AboutBanner} 
+                    text={""} 
+                /> 
                 <div className="collapse-container">
                     {collapses.map((el, index) => {
-                        return <Collapse key={index} title={el.title} text={el.text}/>
+                        return <Collapse 
+                            key={index} 
+                            title={el.title} 
+                            text={el.text}
+                        />
                     })}
                 </div>
             </main>
