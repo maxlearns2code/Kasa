@@ -23,16 +23,16 @@ export default function Collapse({title, text}) {
         </h3>
         <button className="collapse_header--btn" onClick={toogleCollapse}>
           <img 
-            class={!open ? 'arrow-up' : 'arrow-down'} 
+            className={!open ? 'arrow-up' : 'arrow-down'} 
             src={ArrowCollapse} 
             alt="ouverture/fermeture"
           />
         </button>
       </div>
       <div className="collapse_body" ref={body}>
-        <p className="collapse_body--text">
+        <div className="collapse_body--text">
           {text}
-        </p>
+        </div>
       </div>
     </div>
   );

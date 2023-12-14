@@ -26,4 +26,11 @@
         object-fit: cover;
         border-radius: 25px;       
     }
+    &_imageCounter {
+        position: absolute;
+        bottom: 20px;
+        color: $color-white;
+        font-size: $medium-font-size;
+        font-weight: $medium-font-weight;
+    }
 }

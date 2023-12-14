@@ -43,6 +43,9 @@ const SlideShow = ({slides}) => {
                     alt="suivant" 
                 />
             </button>
+            <p className="slideshow_imageCounter">
+                {currentIndex + 1}/{maxSlides}
+            </p>
         </article>        
     )
 }

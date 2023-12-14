@@ -26,9 +26,9 @@ const Housing = () => {
                             <h1 className="content_header--title">
                                 {currentHousing.title}
                             </h1>
-                            <p className="content_header--location">
+                            <div className="content_header--location">
                                 {currentHousing.location}
-                            </p>
+                            </div>
                             <div className="content_header--tags">
                                 {currentHousing.tags.map((el, index) => {
                                     return <Tags 
