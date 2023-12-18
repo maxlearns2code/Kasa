@@ -1,23 +1,33 @@
-import Header from  "../layout/Header"
 import Slideshow from  "../components/Slideshow"
 import Tags from  "../components/Tags"
 import Rating from  "../components/Rating"
 import Collapse from  "../components/Collapse"
-import Footer from  "../layout/Footer"
 import logements from "../datas/logements.json"
-import { useParams } from 'react-router-dom'
+import { useLoaderData,redirect } from 'react-router-dom'
+
+
+export async function loader({params}) {
+    const currentHousing = logements.find(apartment => apartment.id === params.id)
+    // si l'id n'existe pas, on redirige vers la page 404
+    if (!currentHousing) {
+      redirect('/404')
+    }else{
+        // sinon on retourne le logement
+        return { currentHousing };
+
+    }
+  }
+
 
 const Housing = () => {
-    const { id } = useParams();
-    const currentHousing = logements.find(apartment => apartment.id === id)
+    const { currentHousing } = useLoaderData();
     return (
-        <>
-            <Header />            
+     
+          
             <main>
                 <div className="housing">
                     <div className="housing_slider">
                         <Slideshow 
-                            key={id} 
                             slides={currentHousing.pictures}
                         />
                     </div>
@@ -51,7 +61,7 @@ const Housing = () => {
                             </div>
                             <section className="content_body--rating">
                                 <Rating 
-                                    key={id} 
+                                   
                                     rating={currentHousing.rating}
                                 />
                             </section>  
@@ -60,14 +70,12 @@ const Housing = () => {
                     <div className="housing_collapses">
                         <div className="housing_collapses--description">
                             <Collapse 
-                                key={id} 
                                 title="Description" 
                                 text={currentHousing.description}
                             />
                         </div>
                         <div className="housing_collapses--equipments">
                             <Collapse 
-                                key={id} 
                                 title="Equipements" 
                                 text={currentHousing.equipments.map((el, index) => {
                                     return <Tags 
@@ -80,8 +88,7 @@ const Housing = () => {
                     </div>
                 </div>
             </main>
-            <Footer />
-        </>
+          
     )
 }
 export default Housing

@@ -1,7 +1,5 @@
-import Header from  "../layout/Header"
 import Banner from  "../components/Banner"
 import Collapse from  "../components/Collapse"
-import Footer from  "../layout/Footer"
 import AboutBanner from "../assets/Mountains.png"
 
 const collapses = [
@@ -25,8 +23,7 @@ const collapses = [
 
 const About = () => {
     return (
-        <>
-            <Header />            
+       
             <main>
                 <Banner 
                     img={AboutBanner} 
@@ -42,8 +39,7 @@ const About = () => {
                     })}
                 </div>
             </main>
-            <Footer />
-        </>
+
     )
 }
 export default About
