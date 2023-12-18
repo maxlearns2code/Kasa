@@ -1,9 +1,9 @@
-import { createBrowserRouter, RouterProvider, } from 'react-router-dom';
-import Home, { loader as homeLoader } from '../pages/Home';
-import Layout from '../components/Layout';
-import About from '../pages/About';
-import ErrorPage from '../pages/404';
-import Housing, { loader as housingLoader } from '../pages/Housing';
+import { createBrowserRouter, RouterProvider, } from 'react-router-dom'
+import Layout from '../components/Layout'
+import ErrorPage from '../pages/404'
+import Home, { loader as homeLoader } from '../pages/Home'
+import About from '../pages/About'
+import Housing, { loader as housingLoader } from '../pages/Housing'
 
 const router = createBrowserRouter([
   {
@@ -28,7 +28,6 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
 
 function Router() {
     return (

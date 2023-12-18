@@ -4,6 +4,10 @@
     justify-content: space-around;
     align-items: center;
     color: $color-main;
+    height: calc(100vh - 341px);
+    @include for-mobile {
+        height: calc(100vh - 301px);
+    }
     &_title {
         margin-top: 80px;
         font-size: 288px;
@@ -25,5 +29,8 @@
     &_link {
         margin-bottom: 100px;
         text-decoration: underline;
+        @include for-mobile {
+            font-size: $small-font-size;
+        }
     }
 }

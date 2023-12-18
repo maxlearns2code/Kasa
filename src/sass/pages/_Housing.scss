@@ -51,12 +51,16 @@
         }
         &--title {
             font-size: 36px;
+            margin-bottom: 10px;
             @include for-mobile {
                 font-size: $medium-font-size;
             }
         }
         &--location {
             font-size: $medium-font-size;
+            @include for-mobile {
+                font-size: $small-font-size;
+            }
         }
         &--tags {
             width: 80%;
@@ -97,6 +101,7 @@
             flex-direction: row-reverse;
             justify-content: space-between;
             align-items: center;
+            margin-top: 20px;
         }
         &--host {
             display: flex;
@@ -104,17 +109,25 @@
             width: 100%;
             @include for-mobile {
                 align-items: center;
+                width: 33%;
             }
         }
         &--namehost {
             width: 93px;
             text-align: right;
             font-size: $medium-font-size;
+            @include for-mobile {
+                font-size: $small-font-size;
+            }
         }
         &--picturehost {
             width: 64px;
             border-radius: 32px;
             margin-left: 10px;
+            @include for-mobile {
+                width: 32px;
+                border-radius: 16px;
+            }
         }
         &--rating {
             display: flex;
@@ -122,13 +135,15 @@
             justify-content: space-between;
             align-items: center;
             width: 100%;
+            @include for-mobile {
+                width: 33%;
+            }
             .star {
                 width: 36px;
                 @include for-mobile {
                     width: 18px;
                 }
-            }
-            
+            }            
         }
     }
 }

@@ -1,24 +1,19 @@
-import { useLoaderData, redirect } from 'react-router-dom';
+import { useLoaderData, redirect } from 'react-router-dom'
 import Slideshow from  "../components/Slideshow"
 import Tags from  "../components/Tags"
 import Rating from  "../components/Rating"
 import Collapse from  "../components/Collapse"
-
 import logements from "../datas/logements.json"
-
 
 export async function loader({params}) {
     const currentHousing = logements.find(apartment => apartment.title.toLowerCase().split(' ').join('_')
-    === params.id)
-    // si l'id n'existe pas, on redirige vers la page 404
+    === params.id)    
     if (!currentHousing) {
-      redirect('/404')
-    }else{
-        // sinon on retourne le logement
+        redirect('/404')
+    }else{        
         return { currentHousing };
-
     }
-  }
+}
 
 const Housing = () => {
     const { currentHousing } = useLoaderData()

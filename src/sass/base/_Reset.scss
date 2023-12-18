@@ -1,17 +1,17 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: $font-primary;
-    font-style: normal;
-    font-size: $medium-font-size;
-    font-weight: $medium-font-weight;
- }
- a {
-    text-decoration: none;
-    color: $color-main;
- }
- body {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: $font-primary;
+   font-style: normal;
+   font-size: $medium-font-size;
+   font-weight: $medium-font-weight;
+}
+a {
+   text-decoration: none;
+   color: $color-main;
+}
+body {
    margin: auto;
    max-width: 1440px;
- }
+}

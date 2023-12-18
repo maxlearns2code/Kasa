@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 const Card = ({data, lazy}) => {
     const slug = data.title.toLowerCase().split(' ').join('_')

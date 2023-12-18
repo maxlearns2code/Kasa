@@ -1,5 +1,4 @@
-import { useLoaderData } from 'react-router-dom';
-
+import { useLoaderData } from 'react-router-dom'
 import Banner from  "../components/Banner"
 import HomeBanner from "../assets/Cliffs.png"
 import Card from  "../components/Card"
@@ -7,8 +6,8 @@ import Card from  "../components/Card"
 import logements from "../datas/logements.json"
 
 export async function loader() {
-    const housing = logements;
-    return { housing };
+    const housing = logements
+    return { housing }
   }
 
 const Home = () => {
