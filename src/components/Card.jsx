@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom';
 
 const Card = ({data, lazy}) => {
+    const slug = data.title.toLowerCase().split(' ').join('_')
     return (   
         <Link 
-            to={`/housing/${data.id}`}
+            to={`/housing/${slug}`}
         >
             <article className="card">
                 <h2 className="card_title">

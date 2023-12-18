@@ -7,7 +7,8 @@ import { useLoaderData,redirect } from 'react-router-dom'
 
 
 export async function loader({params}) {
-    const currentHousing = logements.find(apartment => apartment.id === params.id)
+    const currentHousing = logements.find(apartment => apartment.title.toLowerCase().split(' ').join('_')
+    === params.id)
     // si l'id n'existe pas, on redirige vers la page 404
     if (!currentHousing) {
       redirect('/404')
