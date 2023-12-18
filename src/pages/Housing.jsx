@@ -9,7 +9,7 @@ import { useParams } from 'react-router-dom'
 
 const Housing = () => {
     const { id } = useParams();
-    const currentHousing = logements.find(apartment => apartment.id === id)
+    const currentHousing = logements.find(housing => housing.title.toLowerCase().split(' ').join('_') === id)
     return (
         <>
             <Header />            
