@@ -1,9 +1,9 @@
 import { Outlet, Link, useLoaderData } from 'react-router-dom';
-import Header from  "../layout/Header"
+
 import Banner from  "../components/Banner"
 import HomeBanner from "../assets/Cliffs.png"
 import Card from  "../components/Card"
-import Footer from  "../layout/Footer"
+
 import logements from "../datas/logements.json"
 
 export async function loader() {
@@ -15,7 +15,7 @@ const Home = () => {
     const { housing } = useLoaderData();
     return (
         <>
-            <Header />            
+                      
             <main>
                 <Banner 
                     img={HomeBanner} 
@@ -31,7 +31,7 @@ const Home = () => {
                     })}
                 </div>
             </main>
-            <Footer />
+            
         </>
     )
 }

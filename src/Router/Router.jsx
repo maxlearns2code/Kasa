@@ -1,5 +1,6 @@
-import {BrowserRouter, createBrowserRouter, RouterProvider, Routes, Route} from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, } from 'react-router-dom';
 import Home, { loader as homeLoader } from '../pages/Home';
+import Layout from '../components/Layout';
 import About from '../pages/About';
 import ErrorPage from '../pages/404';
 import Housing from '../pages/Housing';
@@ -7,19 +8,23 @@ import Housing from '../pages/Housing';
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <Layout />,
     errorElement: <ErrorPage />,
-    loader: homeLoader,    
-  },
-  {
-    path: '/about',
-    element: <About />,
-    errorElement: <ErrorPage />,    
-  },
-  {
-    path: '/housing/:id',
-    element: <Housing />,
-    errorElement: <ErrorPage />,    
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+        loader: homeLoader,    
+      },
+      {
+        path: '/about',
+        element: <About />,
+      },
+      {
+        path: '/housing/:id',
+        element: <Housing />,    
+      },
+    ],
   },
 ]);
 
@@ -28,14 +33,6 @@ function Router() {
     return (
       <div className="router">
          <RouterProvider router={router} />
-        {/*<BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<About />} />
-          <Route path="*" element={<ErrorPage />} />
-          <Route path='/housing/:id' element={<Housing />} />
-        </Routes>
-    </BrowserRouter>*/}
       </div>
     );
   }

@@ -1,9 +1,9 @@
-import Header from  "../layout/Header"
+
 import Slideshow from  "../components/Slideshow"
 import Tags from  "../components/Tags"
 import Rating from  "../components/Rating"
 import Collapse from  "../components/Collapse"
-import Footer from  "../layout/Footer"
+
 import logements from "../datas/logements.json"
 import { useParams } from 'react-router-dom'
 
@@ -12,12 +12,11 @@ const Housing = () => {
     const currentHousing = logements.find(housing => housing.title.toLowerCase().split(' ').join('_') === id)
     return (
         <>
-            <Header />            
+                       
             <main>
                 <div className="housing">
                     <div className="housing_slider">
-                        <Slideshow 
-                            key={id} 
+                        <Slideshow
                             slides={currentHousing.pictures}
                         />
                     </div>
@@ -50,8 +49,7 @@ const Housing = () => {
                                 />
                             </div>
                             <section className="content_body--rating">
-                                <Rating 
-                                    key={id} 
+                                <Rating
                                     rating={currentHousing.rating}
                                 />
                             </section>  
@@ -59,15 +57,13 @@ const Housing = () => {
                     </div>
                     <div className="housing_collapses">
                         <div className="housing_collapses--description">
-                            <Collapse 
-                                key={id} 
+                            <Collapse
                                 title="Description" 
                                 text={currentHousing.description}
                             />
                         </div>
                         <div className="housing_collapses--equipments">
-                            <Collapse 
-                                key={id} 
+                            <Collapse
                                 title="Equipements" 
                                 text={currentHousing.equipments.map((el, index) => {
                                     return <Tags 
@@ -80,7 +76,7 @@ const Housing = () => {
                     </div>
                 </div>
             </main>
-            <Footer />
+            
         </>
     )
 }
