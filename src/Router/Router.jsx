@@ -3,7 +3,7 @@ import Home, { loader as homeLoader } from '../pages/Home';
 import Layout from '../components/Layout';
 import About from '../pages/About';
 import ErrorPage from '../pages/404';
-import Housing from '../pages/Housing';
+import Housing, { loader as housingLoader } from '../pages/Housing';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +22,8 @@ const router = createBrowserRouter([
       },
       {
         path: '/housing/:id',
-        element: <Housing />,    
+        element: <Housing />,
+        loader: housingLoader,    
       },
     ],
   },

@@ -23,25 +23,21 @@ const collapses = [
 
 const About = () => {
     return (
-        <>
-                       
-            <main>
-                <Banner 
-                    img={AboutBanner} 
-                    text={""} 
-                /> 
-                <div className="collapse-container">
-                    {collapses.map((el, index) => {
-                        return <Collapse 
-                            key={index} 
-                            title={el.title} 
-                            text={el.text}
-                        />
-                    })}
-                </div>
-            </main>
-            
-        </>
+        <main>
+            <Banner 
+                img={AboutBanner} 
+                text={""} 
+            /> 
+            <div className="collapse-container">
+                {collapses.map((el, index) => {
+                    return <Collapse 
+                        key={index} 
+                        title={el.title} 
+                        text={el.text}
+                    />
+                })}
+            </div>
+        </main>
     )
 }
 export default About

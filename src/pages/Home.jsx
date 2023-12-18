@@ -1,4 +1,4 @@
-import { Outlet, Link, useLoaderData } from 'react-router-dom';
+import { useLoaderData } from 'react-router-dom';
 
 import Banner from  "../components/Banner"
 import HomeBanner from "../assets/Cliffs.png"
@@ -14,25 +14,21 @@ export async function loader() {
 const Home = () => {
     const { housing } = useLoaderData();
     return (
-        <>
-                      
-            <main>
-                <Banner 
-                    img={HomeBanner} 
-                    text={"Chez vous, partout et ailleurs"} 
-                /> 
-                <div className="card-container">
-                    {housing.map((el,id) => {
-                        return <Card 
-                            key={el.id} 
-                            data={el} 
-                            lazy={id<=6 ? 'eager' : 'lazy'}
-                        />
-                    })}
-                </div>
-            </main>
-            
-        </>
+        <main>
+            <Banner 
+                img={HomeBanner} 
+                text={"Chez vous, partout et ailleurs"} 
+            /> 
+            <div className="card-container">
+                {housing.map((el,id) => {
+                    return <Card 
+                        key={el.id} 
+                        data={el} 
+                        lazy={id<=6 ? 'eager' : 'lazy'}
+                    />
+                })}
+            </div>
+        </main>
     )
 }
 export default Home
