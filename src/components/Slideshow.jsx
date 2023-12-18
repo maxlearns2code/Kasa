@@ -1,26 +1,26 @@
 import ArrowLeftSlideshow from "../assets/Arrow-Left.svg"
 import ArrowRightSlideshow from "../assets/Arrow-Right.svg"
-import { useState } from "react";
+import { useState } from "react"
 
 const SlideShow = ({slides}) => {
 
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0)
 
     const maxSlides = slides.length-1
 
     const previousSlide = () => {
-    setCurrentIndex(currentIndex - 1);
-    if (currentIndex === 0) setCurrentIndex(maxSlides);
-    };
+    setCurrentIndex(currentIndex - 1)
+    if (currentIndex === 0) setCurrentIndex(maxSlides)
+    }
 
     const nextSlide = () => {
-    setCurrentIndex(currentIndex + 1);
-    if (currentIndex === maxSlides) setCurrentIndex(0);
-    };    
+    setCurrentIndex(currentIndex + 1)
+    if (currentIndex === maxSlides) setCurrentIndex(0)
+    }   
 
     return (        
         <article className="slideshow">
-            <button 
+            { slides.length > 1 && <button 
                 className="slideshow_arrow slideshow_arrow--left" 
                 onClick={previousSlide}
             >
@@ -28,13 +28,13 @@ const SlideShow = ({slides}) => {
                     src={ArrowLeftSlideshow} 
                     alt="précédent" 
                 />
-            </button>
+            </button>}            
             <img 
                 className="slideshow_image" 
                 src={slides[currentIndex]} 
                 alt={slides[currentIndex].title}
             />
-            <button 
+            { slides.length > 1 && <button 
                 className="slideshow_arrow slideshow_arrow--right" 
                 onClick={nextSlide}
             >
@@ -42,9 +42,9 @@ const SlideShow = ({slides}) => {
                     src={ArrowRightSlideshow} 
                     alt="suivant" 
                 />
-            </button>
+            </button>}            
             <p className="slideshow_imageCounter">
-                {currentIndex + 1}/{maxSlides}
+                {currentIndex + 1}/{slides.length}
             </p>
         </article>        
     )
