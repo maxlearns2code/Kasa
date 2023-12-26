@@ -6,8 +6,8 @@ import Collapse from  "../components/Collapse"
 import logements from "../datas/logements.json"
 
 export async function loader({params}) {
-    const currentHousing = logements.find(apartment => apartment.title.toLowerCase().split(' ').join('_')
-    === params.id)    
+    const currentHousing = logements.find(housing => housing.id
+    === params.id)   
     if (!currentHousing) {
         redirect('/404')
     }else{        
